@@ -19,7 +19,7 @@
             @foreach($posts as $post)
             <div class="blog-card">
                 <div class="blog-image">
-                    <img src="{{ $post->image ?? 'https://via.placeholder.com/600x400' }}" alt="{{ $post->title }}">
+                    <img src="{{ !empty($post->image) ? (str_starts_with($post->image, 'http') ? $post->image : asset('uploads/blog/' . $post->image)) : 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' }}" alt="{{ $post->title }}">
                 </div>
                 <div class="blog-content">
                     <span class="date">{{ $post->created_at->format('M d, Y') }}</span>

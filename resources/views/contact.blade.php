@@ -37,22 +37,29 @@
                     <div class="contact-info-item">
                         <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
-                            <h4 class="text-lg font-bold">Resort Location</h4>
-                            <p class="text-gray-500">123 Luxury Way, Coastal City, CA 90210</p>
+                            <h4 class="text-lg font-bold">Hotel Location</h4>
+                            <p class="text-gray-500">4 Omorogbe Street, off Princess Ukponmwan Ezomo Street, off Airport Road, Oko, Benin City 300102, Edo</p>
                         </div>
                     </div>
                     <div class="contact-info-item">
                         <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
                         <div>
                             <h4 class="text-lg font-bold">Phone Number</h4>
-                            <p class="text-gray-500">+1 (123) 456-7890</p>
+                            <p class="text-gray-500"><a href="tel:+2348081652353" class="hover:underline hover:text-black">+2348081652353</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div>
+                            <h4 class="text-lg font-bold">WhatsApp</h4>
+                            <p class="text-gray-500"><a href="https://wa.me/2348072638793" target="_blank" class="hover:underline hover:text-black">+2348072638793</a></p>
                         </div>
                     </div>
                     <div class="contact-info-item">
                         <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
                         <div>
                             <h4 class="text-lg font-bold">Email Address</h4>
-                            <p class="text-gray-500">stay@seapearl.com</p>
+                            <p class="text-gray-500"><a href="mailto:Kingswoodshotelandsuites@gmail.com" class="hover:underline hover:text-black">Kingswoodshotelandsuites@gmail.com</a></p>
                         </div>
                     </div>
                 </div>

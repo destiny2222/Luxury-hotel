@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="page-header" style="background-image: url('{{ $post->image ?? 'https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' }}');">
+<section class="page-header" style="background-image: url('{{ !empty($post->image) ? (str_starts_with($post->image, 'http') ? $post->image : asset('uploads/blog/' . $post->image)) : 'https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' }}');">
     <div class="page-header-overlay"></div>
     <div class="container">
         <h1>{{ $post->title }}</h1>
@@ -24,7 +24,7 @@
             </div>
 
             <div class="blog-post-image">
-                <img src="{{ $post->image ?? 'https://via.placeholder.com/1200x600' }}" alt="{{ $post->title }}">
+                <img src="{{ !empty($post->image) ? (str_starts_with($post->image, 'http') ? $post->image : asset('uploads/blog/' . $post->image)) : 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80' }}" alt="{{ $post->title }}">
             </div>
 
             <div class="blog-post-content">

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Admin - Sea Pearl Resort</title>
+    <title>Admin - Kingswood Hotel and Suites</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -360,7 +360,7 @@
     <!-- Sidebar -->
     <aside class="admin-sidebar" id="sidebar">
         <div class="sidebar-header">
-            <h2>SEA PEARL</h2>
+            <h2>KINGSWOOD</h2>
             <small>Admin Dashboard</small>
         </div>
         <nav class="sidebar-nav">
@@ -378,6 +378,9 @@
             </a>
             <a href="{{ route('admin.testimonials.index') }}" class="nav-link {{ request()->routeIs('admin.testimonials.*') ? 'active' : '' }}">
                 <i class="fas fa-star"></i> Testimonials
+            </a>
+            <a href="{{ route('admin.posts.index') }}" class="nav-link {{ request()->routeIs('admin.posts.*') ? 'active' : '' }}">
+                <i class="fas fa-blog"></i> Posts
             </a>
             <a href="{{ route('admin.contacts.index') }}" class="nav-link {{ request()->routeIs('admin.contacts.*') ? 'active' : '' }}">
                 <i class="fas fa-envelope"></i> Messages

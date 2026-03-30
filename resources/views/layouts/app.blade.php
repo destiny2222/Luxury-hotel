@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sea Pearl - Luxury Hotel & Resort</title>
+    <title>Kings woods Hotel and Suites</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +52,7 @@
         <nav class="container">
             <div class="logo">
                 <a href="{{ route('home') }}">
-                    <span class="logo-text">SEA PEARL</span>
+                    <span class="logo-text">KINGSWOOD HOTEL</span>
                 </a>
             </div>
             
@@ -115,8 +115,8 @@
         <div class="footer-top">
             <div class="container footer-grid">
                 <div class="footer-info">
-                    <span class="footer-logo">SEA PEARL</span>
-                    <p>Experience the epitome of luxury and comfort at Sea Pearl Resort. Your sanctuary of relaxation where the horizon meets the sea.</p>
+                    <span class="footer-logo">KINGSWOOD HOTEL AND SUITES</span>
+                    <p>Experience the epitome of luxury and comfort at Kingswood Hotel and Suites. Your sanctuary of relaxation where the horizon meets the sea.</p>
                     <div class="flex gap-4 mt-6">
                         <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all"><i class="fab fa-instagram"></i></a>
@@ -143,15 +143,16 @@
                 </div>
                 <div class="footer-contact">
                     <h4 class="footer-title">Contact Info</h4>
-                    <p class="mb-4"><i class="fas fa-map-marker-alt text-primary mr-3"></i> 124 Luxury Way, Ocean View Dr, Resort City, FL 33139</p>
-                    <p class="mb-4"><i class="fas fa-phone-alt text-primary mr-3"></i> +1 (305) 555-0123</p>
-                    <p class="mb-4"><i class="fas fa-envelope text-primary mr-3"></i> stay@seapearlresort.com</p>
+                    <p class="mb-4"><i class="fas fa-map-marker-alt text-primary mr-3"></i> 4 Omorogbe Street, off Princess Ukponmwan Ezomo Street, off Airport Road, Oko, Benin City 300102, Edo</p>
+                    <p class="mb-4"><i class="fas fa-phone-alt text-primary mr-3"></i> 08081652353</p>
+                    <p class="mb-4"><i class="fab fa-whatsapp text-primary mr-3"></i> 08072638793</p>
+                    <p class="mb-4"><i class="fas fa-envelope text-primary mr-3"></i> Kingswoodshotelandsuites@gmail.com</p>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; {{ date('Y') }} Sea Pearl Resort & Spa. Crafted with Elegance.</p>
+                <p>&copy; {{ date('Y') }} Kingswood Hotel and Suites. Crafted with Dexnovate.</p>
             </div>
         </div>
     </footer>

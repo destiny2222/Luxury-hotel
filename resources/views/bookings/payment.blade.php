@@ -103,7 +103,7 @@ function makePayment() {
             name: "{{ $booking->guest_info['name'] }}",
         },
         customizations: {
-            title: "Sea Pearl Resort",
+            title: "Kingswood Hotel and Suites",
             description: "Booking #{{ $booking->booking_reference }}",
             logo: "",
         },

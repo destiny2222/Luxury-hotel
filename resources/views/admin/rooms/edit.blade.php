@@ -57,7 +57,7 @@
             @if($room->images && count($room->images) > 0)
                 <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem; flex-wrap: wrap;">
                     @foreach($room->images as $img)
-                        <img src="{{ $img }}" style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px; border: 1px solid var(--admin-border);">
+                        <img src="{{ asset('uploads/rooms/' . $img) }}" style="width: 80px; height: 60px; object-fit: cover; border-radius: 4px; border: 1px solid var(--admin-border);">
                     @endforeach
                 </div>
             @endif

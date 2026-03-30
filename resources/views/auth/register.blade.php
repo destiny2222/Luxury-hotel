@@ -16,7 +16,7 @@
 <section class="section-padding">
     <div class="container" style="max-width: 500px;">
         <div class="auth-card">
-            <h2 class="text-center mb-8" style="font-size: 2rem;">Join Sea Pearl</h2>
+            <h2 class="text-center mb-8" style="font-size: 2rem;">Join Kingswood</h2>
 
             @if($errors->any())
                 <div class="alert alert-danger" style="background: #f8d7da; color: #721c24; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">

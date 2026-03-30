@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="page-header" style="background-image: url('{{ $room->images[0] ?? '' }}'); min-height: 300px;">
+<section class="page-header" style="background-image: url('{{ !empty($room->images[0]) ? (str_starts_with($room->images[0], 'http') ? $room->images[0] : asset('uploads/rooms/' . $room->images[0])) : 'https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' }}'); min-height: 300px;">
     <div class="page-header-overlay"></div>
     <div class="container">
         <h1>{{ $room->name }}</h1>
@@ -21,12 +21,12 @@
             <div class="room-main">
                 <div class="room-gallery">
                     <div class="main-image">
-                        <img id="mainRoomImage" src="{{ $room->images[0] ?? 'https://via.placeholder.com/800x500' }}" alt="{{ $room->name }}">
+                        <img id="mainRoomImage" src="{{ !empty($room->images[0]) ? (str_starts_with($room->images[0], 'http') ? $room->images[0] : asset('uploads/rooms/' . $room->images[0])) : 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' }}" alt="{{ $room->name }}">
                     </div>
                     <div class="thumbnail-grid">
                         @foreach($room->images as $index => $image)
                             <div class="thumbnail {{ $index === 0 ? 'active' : '' }}" onclick="swapImage(this, '{{ $image }}')">
-                                <img src="{{ $image }}" alt="{{ $room->name }}">
+                                <img src="{{ !empty($image) ? (str_starts_with($image, 'http') ? $image : asset('uploads/rooms/' . $image)) : 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80' }}" alt="{{ $room->name }}">
                             </div>
                         @endforeach
                     </div>
@@ -156,7 +156,7 @@
                     @foreach($relatedRooms as $related)
                         <div class="related-item">
                             <div class="related-img">
-                                <img src="{{ $related->images[0] ?? '' }}" alt="{{ $related->name }}">
+                                <img src="{{ !empty($related->images[0]) ? (str_starts_with($related->images[0], 'http') ? $related->images[0] : asset('uploads/rooms/' . $related->images[0])) : 'https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' }}" alt="{{ $related->name }}">
                             </div>
                             <div class="related-info">
                                 <h4><a href="{{ route('rooms.show', $related->slug) }}">{{ $related->name }}</a></h4>

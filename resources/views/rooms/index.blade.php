@@ -40,7 +40,7 @@
             @foreach($rooms as $room)
             <div class="room-card-v2" data-category="{{ $room->category->slug }}" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
                 <div class="room-img">
-                    <img src="{{ $room->images[0] ?? 'https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' }}" alt="{{ $room->name }}">
+                    <img src="{{ !empty($room->images[0]) ? (str_starts_with($room->images[0], 'http') ? $room->images[0] : asset('uploads/rooms/' . $room->images[0])) : 'https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' }}" alt="{{ $room->name }}">
                     <div class="room-price-tag">${{ $room->price }} / Night</div>
                 </div>
                 <div class="room-info">

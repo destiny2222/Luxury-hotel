@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login - Sea Pearl Resort</title>
+    <title>Admin Login - Kingswood Hotel and Suites</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -148,7 +148,7 @@
 
 <div class="admin-login-wrapper">
     <div class="admin-login-header">
-        <h1>SEA PEARL</h1>
+        <h1>KINGSWOOD HOTEL AND SUITES</h1>
         <p>Staff Portal Access</p>
     </div>
     

@@ -32,6 +32,8 @@ class RoomController extends Controller
             'capacity' => 'required|integer|min:1',
             'amenities' => 'nullable|string',
             'status' => 'required|in:available,maintenance,cleaning',
+            'images' => 'nullable|array',
+            'images.*' => 'image|mimes:jpeg,png,jpg,gif,webp,avif'
         ]);
 
         $validated['slug'] = Str::slug($validated['name']);
@@ -44,8 +46,9 @@ class RoomController extends Controller
         if ($request->hasFile('images')) {
             $images = [];
             foreach ($request->file('images') as $image) {
-                $path = $image->store('rooms', 'public');
-                $images[] = '/storage/' . $path;
+                $imageName = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
+                $image->move(public_path('/uploads/rooms'), $imageName);
+                $images[] = $imageName;
             }
             $validated['images'] = $images;
         }
@@ -71,6 +74,8 @@ class RoomController extends Controller
             'capacity' => 'required|integer|min:1',
             'amenities' => 'nullable|string',
             'status' => 'required|in:available,maintenance,cleaning',
+            'images' => 'nullable|array',
+            'images.*' => 'image|mimes:jpeg,png,jpg,gif,webp,avif'
         ]);
 
         $validated['slug'] = Str::slug($validated['name']);
@@ -81,8 +86,9 @@ class RoomController extends Controller
         if ($request->hasFile('images')) {
             $images = [];
             foreach ($request->file('images') as $image) {
-                $path = $image->store('rooms', 'public');
-                $images[] = '/storage/' . $path;
+                $imageName = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
+                $image->move(public_path('/uploads/rooms'), $imageName);
+                $images[] = $imageName;
             }
             $validated['images'] = $images;
         }

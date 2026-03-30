@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\BookingEditRequestController;
+use App\Http\Controllers\Admin\PostController;
 
 Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
@@ -25,6 +26,9 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(fun
 
     // Testimonials
     Route::resource('testimonials', TestimonialController::class)->except(['show', 'edit']);
+
+    // Posts
+    Route::resource('posts', PostController::class)->except(['show']);
 
     // Contact messages
     Route::get('contacts', [ContactController::class, 'index'])->name('contacts.index');

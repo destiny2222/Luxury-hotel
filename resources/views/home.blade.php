@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('styles')
-  <style>
-    .booking-widget {
-        bottom: -50px;
-    }
-  </style>
+    <style>
+        .booking-widget {
+            bottom: -50px;
+        }
+    </style>
 @endsection
 @section('content')
 
@@ -95,7 +95,8 @@
                     </select>
                 </div>
                 <div class="w-full md:w-auto mt-4 md:mt-0">
-                    <button type="submit" class="btn-primary w-full md:w-auto px-8 py-4 font-bold tracking-widest text-sm hover:-translate-y-1 transition-transform">CHECK
+                    <button type="submit"
+                        class="btn-primary w-full md:w-auto px-8 py-4 font-bold tracking-widest text-sm hover:-translate-y-1 transition-transform">CHECK
                         AVAILABILITY</button>
                 </div>
             </form>
@@ -106,14 +107,15 @@
     <section id="about" class="about section-padding">
         <div class="container about-grid">
             <div class="about-image" data-aos="fade-zoom-out">
-                <img  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                     alt="Resort View">
             </div>
             <div class="about-content">
                 <div data-aos="fade-zoom-in">
                     <span class="subtitle">Our Story</span>
                     <h2 class="section-title">The Ultimate Luxury <br> Experience</h2>
-                    <p class="mb-6">Nestled between the azure waves and lush tropical gardens, Sea Pearl Resort offers a
+                    <p class="mb-6">Nestled between the azure waves and lush tropical gardens, Kingswood Hotel and Suites
+                        offers a
                         sanctuary of peace and elegance. Our commitment to excellence ensures every guest enjoys a truly
                         memorable stay.</p>
                     <ul class="space-y-4 mb-8">
@@ -147,7 +149,7 @@
             @foreach ($featuredRooms as $room)
                 <div class="room-card" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
                     <div class="room-img-container">
-                        <img src="{{ $room->images[0] ?? 'https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' }}"
+                        <img src="{{ !empty($room->images[0]) ? (str_starts_with($room->images[0], 'http') ? $room->images[0] : asset('uploads/rooms/' . $room->images[0])) : 'https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' }}"
                             alt="{{ $room->name }}">
                         <div class="room-price-tag">${{ $room->price }} / Night</div>
                     </div>
@@ -207,7 +209,7 @@
     <section id="gallery" class="gallery section-padding bg-bg-alt">
         <div class="container text-center mb-12">
             <span class="subtitle">Our Visual Story</span>
-            <h2 class="section-title">The Sea Pearl Gallery</h2>
+            <h2 class="section-title">The Kingswood Gallery</h2>
 
             <div class="gallery-filters mt-8 flex flex-wrap justify-center gap-4">
                 <button class="filter-btn active" data-filter="all">All</button>
@@ -302,7 +304,7 @@
                         <div class="swiper-slide">
                             <div class="testimonial-card mx-auto">
                                 <i class="fas fa-quote-left quote-icon"></i>
-                                <p class="testimonial-text">"An unforgettable stay. The Sea Pearl team made every moment
+                                <p class="testimonial-text">"An unforgettable stay. The Kingswood team made every moment
                                     special."</p>
                                 <div class="testimonial-author">
                                     <span class="author-name">Happy Guest</span>
@@ -328,7 +330,7 @@
             @foreach ($latestPosts as $post)
                 <div class="blog-card" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
                     <div class="blog-img">
-                        <img src="{{ $post->image ?? 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' }}"
+                        <img src="{{ !empty($post->image) ? (str_starts_with($post->image, 'http') ? $post->image : asset('uploads/blog/' . $post->image)) : 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' }}"
                             alt="{{ $post->title }}">
                     </div>
                     <div class="blog-content">
