@@ -33,7 +33,7 @@
                 <span class="subtitle">A New Vision of Luxury</span>
                 <h2 class="section-title text-left">The Ultimate Escape For <br> Luxury Seekers</h2>
                 <p class="text-gray-500 mb-6 leading-relaxed">Experience a world-class stay where luxury meets tranquility. Our resort is meticulously designed to provide an unparalleled experience for those seeking a peaceful escape from the everyday hustle.</p>
-                <p class="text-gray-500 mb-8 leading-relaxed">Kingswood has grown into a premier destination for travelers worldwide. Our commitment to excellence is reflected in every architectural detail, our curated amenities, and our dedicated team's exceptional service.</p>
+                <p class="text-gray-500 mb-8 leading-relaxed">Kings woods has grown into a premier destination for travelers worldwide. Our commitment to excellence is reflected in every architectural detail, our curated amenities, and our dedicated team's exceptional service.</p>
                 
                 <div class="stats-grid">
                     <div class="stat-card">

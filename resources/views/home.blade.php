@@ -114,7 +114,7 @@
                 <div data-aos="fade-zoom-in">
                     <span class="subtitle">Our Story</span>
                     <h2 class="section-title">The Ultimate Luxury <br> Experience</h2>
-                    <p class="mb-6">Nestled between the azure waves and lush tropical gardens, Kingswood Hotel and Suites
+                    <p class="mb-6">Nestled between the azure waves and lush tropical gardens, Kings woods Hotel and Suites
                         offers a
                         sanctuary of peace and elegance. Our commitment to excellence ensures every guest enjoys a truly
                         memorable stay.</p>
@@ -209,7 +209,7 @@
     <section id="gallery" class="gallery section-padding bg-bg-alt">
         <div class="container text-center mb-12">
             <span class="subtitle">Our Visual Story</span>
-            <h2 class="section-title">The Kingswood Gallery</h2>
+            <h2 class="section-title">The Kings woods Gallery</h2>
 
             <div class="gallery-filters mt-8 flex flex-wrap justify-center gap-4">
                 <button class="filter-btn active" data-filter="all">All</button>
@@ -304,7 +304,7 @@
                         <div class="swiper-slide">
                             <div class="testimonial-card mx-auto">
                                 <i class="fas fa-quote-left quote-icon"></i>
-                                <p class="testimonial-text">"An unforgettable stay. The Kingswood team made every moment
+                                <p class="testimonial-text">"An unforgettable stay. The Kings woods team made every moment
                                     special."</p>
                                 <div class="testimonial-author">
                                     <span class="author-name">Happy Guest</span>
@@ -355,8 +355,9 @@
                 <h2 class="text-3xl font-serif mb-2">Subscribe To Our Newsletter</h2>
                 <p class="text-white/80">Stay updated with our latest offers and luxury hotel news.</p>
             </div>
-            <form class="flex w-full md:w-auto gap-2">
-                <input type="email" placeholder="Your Email Address"
+            <form action="{{ route('newsletter.subscribe') }}" method="POST" class="flex w-full md:w-auto gap-2">
+                @csrf
+                <input type="email" name="email" placeholder="Your Email Address" required
                     class="bg-white/10 border border-white/20 text-white placeholder-white/60 px-6 py-4 rounded focus:outline-none focus:bg-white/20 w-full md:w-[400px]">
                 <button type="submit"
                     class="bg-white text-black font-bold uppercase tracking-widest px-8 py-4 rounded hover:bg-gray-100 transition-all">Subscribe</button>

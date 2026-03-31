@@ -52,7 +52,7 @@
                         <div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div>
                         <div>
                             <h4 class="text-lg font-bold">WhatsApp</h4>
-                            <p class="text-gray-500"><a href="https://wa.me/2348072638793" target="_blank" class="hover:underline hover:text-black">+2348072638793</a></p>
+                            <p class="text-gray-500"><a href="https://wa.me/+2348072638793" target="_blank" class="hover:underline hover:text-black">+2348072638793</a></p>
                         </div>
                     </div>
                     <div class="contact-info-item">
